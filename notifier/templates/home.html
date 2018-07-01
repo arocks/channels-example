@@ -11,7 +11,7 @@
       const webSocketBridge = new channels.WebSocketBridge();
       webSocketBridge.connect('/ws/');
       webSocketBridge.listen(function(action, stream) {
-        console.log("RESPONSE:", action, stream);
+        console.log("RESPONSE:", action);
       })
       document.ws = webSocketBridge; /* for debugging */
     })

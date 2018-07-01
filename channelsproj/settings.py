@@ -25,12 +25,15 @@ SECRET_KEY = 'hf178p075q1zi_!$o469jye^i+5sk=g4#*selbu6kg#zfesr42'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["0.0.0.0"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
+    'notifier',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -69,6 +72,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'channelsproj.wsgi.application'
 
+ASGI_APPLICATION = "channelsproj.routing.application"
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
